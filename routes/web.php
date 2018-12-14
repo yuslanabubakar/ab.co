@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', HomeController@index); // tes coba lagi
-
-Route::post('/home', HomeController@store); //coba cgiommit lagi
+Route::get('/login', UserController@loginView);
