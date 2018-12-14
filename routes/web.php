@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/home', HomeController@index); // tes coba lagi
+
+Route::post('/home', HomeController@store); //coba commit lagi
