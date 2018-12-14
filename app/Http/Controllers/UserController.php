@@ -13,6 +13,10 @@ class UserController extends Controller
         return response()->json(User::with(['orders'])->get());
     }
 
+    public function loginView(){
+        return view('loginView');
+    }
+
     public function login(Request $request)
     {
         $status = 401;
