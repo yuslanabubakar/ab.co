@@ -14,7 +14,7 @@ class UserController extends Controller
     }
 
     public function loginView(){
-        return view('loginView');
+        return view('login');
     }
 
     public function login(Request $request)
