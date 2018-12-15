@@ -28,7 +28,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="{{ URL ('pict/abuw2.png')}}" alt="Klorofil Logo" class="img-responsive logo" style="height:auto;"></a>
+				<a href="index.html"><img src="{{ URL ('pict/abuw2.png') }}" alt="Klorofil Logo" class="img-responsive logo" style="height:auto;"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -90,7 +90,7 @@
 						@section('leftbar')
 						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
 						<li>
-							<a href="" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Category</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Category</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
 									<li><a href="page-profile.html" class="">Mens</a></li>
@@ -101,7 +101,7 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Help</span></a></li>
+						<li><a href="tables.html" class=""><i class="lnr lnr-question-circle"></i> <span>Help</span></a></li>
 						@show
 					</ul>
 				</nav>
