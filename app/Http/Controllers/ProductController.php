@@ -17,6 +17,13 @@ class ProductController extends Controller
     }
 
     /**
+     * Function Show Seller Add Product Page
+     */
+    public function viewAddProduct(){
+        return view('user.seller.addproduct');
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
