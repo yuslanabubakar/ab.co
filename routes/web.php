@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/', 'UserController@loginView');
+Route::get('/', 'HomeController@index');
+Route::get('/login', 'UserController@loginView');
