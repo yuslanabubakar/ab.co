@@ -45,7 +45,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label ">Product Image </label>
-									<input type="text" class="form-control" placeholder="Price" name="price" value="" disable>
+									<input type="file" class="form-control" placeholder="Image" name="price" value="" disabled>
 								</div>
 						</div>
 						<div class="panel-footer" align="right">
