@@ -1,11 +1,15 @@
 @extends('layouts.mainwrapper')
 
+@section('title')
+<title>Ab.co | Input Products</title>
+@endsection
+
 @section('content')
 <div class="main">
 	<!-- MAIN CONTENT -->
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Input Produk</h3>
+			<h3 class="page-title">Input Products</h3>
 			<div class="row">
 				<div class="col-md-6">
 					<!-- BUTTONS -->
@@ -14,34 +18,34 @@
 					<!-- INPUTS -->
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Input Produk</h3>
+							<h3 class="panel-title">Add Product</h3>
 						</div>
 						<div class="panel-body">
 							<form action="/produk" method="POST">
 								{{csrf_field()}}
 								<div class="form-group">
-									<label class="control-label ">Kode Produk </label>
-									<input type="text" class="form-control" placeholder="Kode Produk" name="kode_produk" value="">
+									<label class="control-label ">ID Product </label>
+									<input type="text" class="form-control" placeholder="ID Product" name="id" value="">
 								</div>
 								<div class="form-group">
-									<label class="control-label ">Nama Produk </label>
-									<input type="text" class="form-control" placeholder="Nama Produk" name="nama_produk" value="">
+									<label class="control-label ">Product Name </label>
+									<input type="text" class="form-control" placeholder="Product Name" name="name" value="">
 								</div>
 								<div class="form-group">
-									<label class="control-label ">Merk </label>
-									<input type="text" class="form-control" placeholder="Merk" name="merk" value="">
-								</div>
-								<div class="form-group">
-									<label class="control-label ">Jenis Produk </label>
-									<input type="text" class="form-control" placeholder="Jenis Produk" name="jenis_produk" value="">
+									<label class="control-label ">Price </label>
+									<input type="text" class="form-control" placeholder="Price" name="price" value="">
 								</div>
 								<div class="form-group">
 									<label class="control-label ">Stock </label>
 									<input type="text" class="form-control" placeholder="Stock" name="stock" value="">
 								</div>
 								<div class="form-group">
-									<label class="control-label ">Price </label>
-									<input type="text" class="form-control" placeholder="Price" name="price" value="">
+									<label class="control-label ">Description </label>
+									<textarea class="form-control" name="description">Description</textarea>
+								</div>
+								<div class="form-group">
+									<label class="control-label ">Product Image </label>
+									<input type="text" class="form-control" placeholder="Price" name="price" value="" disable>
 								</div>
 						</div>
 						<div class="panel-footer" align="right">
@@ -63,7 +67,8 @@
 
 					<!-- END INPUT SIZING -->
 				</div>
-				<div class="col-md-6">
+				<!-- Column 2 -->
+				<!--<div class="col-md-6">
 					<div class="panel">
 						<div class="panel-heading">
 							<h3 class="panel-title">Data Produk</h3>
@@ -79,19 +84,13 @@
 									</tr>
 								</thead>
 								<tbody>
-									@foreach($produk as $row)
-									<tr>
-										<td>{{$row->kode_produk}}</td>
-										<td>{{$row->nama_produk}}</td>
-										<td>{{$row->merk}}</td>
-										<td>{{$row->stock}}</td>
-										<td><a href="{{URL('/produk/edit')}}/{{$row->kode_produk}}"  class="btn btn-info">Edit</a></td>
-									</tr>
-									@endforeach
+									
 								</tbody>
 							</table>
 						</div>
-					</div>
+					</div>-->
+
+
 					<!-- LABELS -->
 
 					<!-- END LABELS -->

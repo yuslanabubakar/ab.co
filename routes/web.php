@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'UserController@loginView');
+
+Route::get('/product','ProductController@index');
