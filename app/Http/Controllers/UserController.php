@@ -17,6 +17,10 @@ class UserController extends Controller
         return view('login.login');
     }
 
+    public function registerView(){
+        return view('login.register');
+    }
+
     public function login(Request $request)
     {
         $status = 401;
