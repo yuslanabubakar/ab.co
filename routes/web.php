@@ -12,4 +12,7 @@
 */
 Route::get('/seller/addProduct','ProductController@viewAddProduct');
 Route::get('/', 'HomeController@index');
+
+//Login & Register
 Route::get('/login', 'UserController@loginView');
+Route::get('/login/register', 'UserController@registerView');

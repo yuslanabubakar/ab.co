@@ -1,7 +1,7 @@
 @extends('layouts.mainwrapper')
 
 @section('title')
-<title>Ab.co | Input Products</title>
+<title>Ab.co | Home Page</title>
 @endsection
 
 @section('content')
@@ -17,7 +17,6 @@
 							<h3 class="panel-title">Product Title</h3>
 						</div>
 						<div class="panel-body">
-								{{csrf_field()}}
 								<div class="form-group" align="center">
 									<img src="{{ URL ('pict/nopict.png') }}" class="img-thumbnail"/>
 								</div>
@@ -38,7 +37,7 @@
 								</ul>
 							</div>
 							@endif
-							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-save"></i>&nbsp;&nbsp;SAVE</button>
+							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-search"></i>&nbsp;&nbsp;View</button>
 						</div>
 					</div>
                 </div>
@@ -48,7 +47,6 @@
 							<h3 class="panel-title">Product Title</h3>
 						</div>
 						<div class="panel-body">
-								{{csrf_field()}}
 								<div class="form-group" align="center">
 									<img src="{{ URL ('pict/nopict.png') }}" class="img-thumbnail"/>
 								</div>
@@ -69,7 +67,7 @@
 								</ul>
 							</div>
 							@endif
-							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-save"></i>&nbsp;&nbsp;SAVE</button>
+							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-search"></i>&nbsp;&nbsp;View</button>
 						</div>
 					</div>
                 </div>
@@ -79,7 +77,6 @@
 							<h3 class="panel-title">Product Title</h3>
 						</div>
 						<div class="panel-body">
-								{{csrf_field()}}
 								<div class="form-group" align="center">
 									<img src="{{ URL ('pict/nopict.png') }}" class="img-thumbnail"/>
 								</div>
@@ -100,10 +97,11 @@
 								</ul>
 							</div>
 							@endif
-							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-save"></i>&nbsp;&nbsp;SAVE</button>
+							<button type="submit" class="btn btn-primary btn-md" id="save" name="sbmt"><i class="fa fa-search"></i>&nbsp;&nbsp;View</button>
 						</div>
 					</div>
-				</div>
+                </div>
+                
 				<!-- Column 2 -->
 				<!--<div class="col-md-6">
 					<div class="panel">
