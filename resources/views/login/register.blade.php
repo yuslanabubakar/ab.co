@@ -33,24 +33,39 @@
 								<div class="logo text-center"><img src="{{ URL('pict/abuw.png') }}" alt="Klorofil Logo"></div>
 								<p class="lead">Register Account</p>
 							</div>
-							<form class="form-auth-small" action="index.php">
+							@if ($errors->any())
+								<div class="alert alert-danger">
+									<ul>
+										@foreach ($errors->all() as $error)
+											<li>{{ $error }}</li>
+										@endforeach
+									</ul>
+								</div>
+							@endif
+							<form class="form-auth-small" method="post" action="{{ URL::to('/register/add') }}">
+							{{ csrf_field() }}
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Name</label>
-									<input type="email" class="form-control" name="name" value="" placeholder="Name">
+									<input type="text" class="form-control" name="name" value="" placeholder="Name" required>
                                 </div>
                                 <div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>
-									<input type="email" class="form-control" name="email" value="" placeholder="Email">
+									<input type="email" class="form-control" name="email" value="" placeholder="Email" required>
                                 </div>
                                 <div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Password</label>
-									<input type="email" class="form-control" name="password" value="" placeholder="Password">
+									<input type="password" class="form-control" name="password" value="" placeholder="Password (at least 6 character)" required>
                                 </div>
                                 <div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Password Validation</label>
-									<input type="email" class="form-control" name="passwordvalidation" value="" placeholder="Password Validation">
+									<input type="password" class="form-control" name="c_password" value="" placeholder="Password Validation" required>
+                                </div>
+								<div class="form-group">
+									<input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}">
                                 </div>
 								<button type="submit" class="btn btn-primary btn-lg btn-block">REGISTER</button>
+								<br>
+								<a href="{{url('login')}}" class="">Have an account? Login</a>
 							</form>
 						</div>
 					</div>

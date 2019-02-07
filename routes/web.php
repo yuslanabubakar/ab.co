@@ -15,4 +15,7 @@ Route::get('/', 'HomeController@index');
 
 //Login & Register
 Route::get('/login', 'UserController@loginView');
-Route::get('/login/register', 'UserController@registerView');
+Route::get('/register', 'UserController@registerView');
+Route::post('/register/add', 'UserController@register');
+Route::post('/login/login', 'UserController@login');
+Route::get('/logout', 'UserController@logout');
