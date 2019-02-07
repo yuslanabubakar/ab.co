@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Validator;
 use Auth;
 
 class UserController extends Controller
@@ -23,16 +21,12 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        $status = 401;
-        $response = ['Error' => 'Unauthorized'];
 
         if (Auth::attempt($request->only(['email','password'])))
         {
             $status = 200;
             $response = ['user' => Auth::user()];
         }
-
-        return response()->json($response,$status);
     }
 
     public function register(Request $request)
